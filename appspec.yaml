@@ -9,9 +9,3 @@ permissions:
    pattern: "**"
    owner: ubuntu
    group: ubuntu
-
-hooks:
-ApplicationStop:
-   - location: home/ubuntu/server
-     timeout: 10
-     runas: ubuntu
