@@ -1,0 +1,17 @@
+version: 0.0
+os: linux
+files:
+- source: /
+ destination: /home/ubuntu/server
+
+permissions:
+- object: /
+   pattern: "**"
+   owner: ubuntu
+   group: ubuntu
+
+hooks:
+ApplicationStop:
+   - location: home/ubuntu/server
+     timeout: 10
+     runas: ubuntu
